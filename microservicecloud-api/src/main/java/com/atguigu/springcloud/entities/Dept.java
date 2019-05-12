@@ -1,13 +1,11 @@
 package com.atguigu.springcloud.entities;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-@NoArgsConstructor
 @Data
 @Accessors(chain = true)
 public class Dept implements Serializable{
@@ -20,12 +18,14 @@ public class Dept implements Serializable{
 		this.dname = dname;
 	}
 
-	public Dept(Long deptno, String dname, String db_source) {
+    public Dept() {
+    }
+
+    public Dept(Long deptno, String dname, String db_source) {
 		this.deptno = deptno;
 		this.dname = dname;
 		this.db_source = db_source;
 	}
-
     public Long getDeptno() {
         return deptno;
     }
